@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <h2>Anime: {{ anime }}</h2>
+
+    <h3>Main Characters:</h3>
+    <ul>
+        {% for character in main_characters %}
+            <li>{{ character }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Genres:</h3>
+    <ul>
+        {% for genre in genres %}
+            <li>{{ genre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Episodes:</h3>
+    {% if episodes %}
+        <p>This anime has {{ episodes }} episodes.</p>
+    {% else %}
+        <p>Number of episodes unknown.</p>
+    {% endif %}
+</body>
+</html>
+
+
+
+
